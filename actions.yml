@@ -1,5 +1,0 @@
-name: "Teste teste teste"
-description: "Teste teste teste AAA"
-runs:
-  using: "node16"
-  main: "dist/test.js"
