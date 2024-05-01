@@ -4,7 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "bundle": "npm run format:write && npm run package",
+    "ci-test": "npx jest",
+    "coverage": "npx make-coverage-badge --output-path ./badges/coverage.svg",
+    "format:write": "npx prettier --write .",
+    "format:check": "npx prettier --check .",
+    "lint": "npx eslint",
+    "package": "npx ncc build src/index.ts -o dist --source-map --license licenses.txt",
+    "package:watch": "npm run package -- --watch",
+    "test": "npx jest --coverage --verbose",
+    "test:dev": "npx jest --watch",
+    "all": "npm run format:write && npm run lint && npm run test && npm run coverage && npm run package && npm run build",
+    "build": "npx tsc"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +25,8 @@
     "@actions/github": "^6.0.0"
   },
   "devDependencies": {
+    "@vercel/ncc": "^0.38.1",
+    "prettier": "^3.2.5",
     "typescript": "^5.4.5"
   }
 }
