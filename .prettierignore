@@ -8,3 +8,4 @@ __tests__/
 badges/
 script/
 pnpm-lock.yaml
+.eslintrc.js
