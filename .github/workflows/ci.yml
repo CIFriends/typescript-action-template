@@ -53,7 +53,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Install dependencies
-        run: npm ci
+        run: |
+          npm ci
+          npm run all
       - name: Hello world action step
         uses: ./ # Uses an action in the root directory
         id: hello
