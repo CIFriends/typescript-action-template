@@ -31,7 +31,7 @@ keyword. For example:
 ```yaml
 steps:
   - name: Example Step
-    uses: ./ # Uses an action in the root directory, if you push this repository to GitHub, you can use the following: uses: <username>/gh-action-template@v1
+    uses: ./ # Uses an action in the root directory, if you push this repository to GitHub, you can use the following: uses: <username>/typescript-action-template@v1
     with:
       who-to-greet: "Mona the Octocat"
 ```
