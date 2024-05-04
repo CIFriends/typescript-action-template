@@ -76,9 +76,9 @@ In your TypeScript code, you can use the `core.getInput` function from the
 ### Nektos/act
 
 > [!NOTE]
-> Docs: [nektos](https://nektosact.com/introduction.html)
+> Docs: [Nektos](https://nektosact.com/introduction.html)
 
-Install [nektos/act](https://github.com/nektos/act) and run the following
+Install [Nektos/act](https://github.com/nektos/act) and run the following
 command:
 
 ```bash
