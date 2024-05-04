@@ -22,7 +22,9 @@ module.exports = {
     "*.test.ts",
     "dist/",
     "coverage/",
-    "lib/"
+    "lib/",
+    "pnpm-lock.yaml",
+    ".pnpm-store/",
   ], // ESLINT IGNORE
 
   env: {
