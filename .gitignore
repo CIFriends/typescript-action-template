@@ -106,3 +106,5 @@ __tests__/runner/*
 
 # yml files
 linter.yml
+
+dist
