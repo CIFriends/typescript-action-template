@@ -41,13 +41,9 @@ jobs:
           node-version-file: .node-version
           cache: 'pnpm'
 
-      - name: Install Dependencies
-        id: install
-        run: pnpm install
-
       - name: Build dist/ Directory
         id: build
-        run: pnpm run bundle
+        run: pnpm run preflight
 
       # This will fail the workflow if the `dist/` directory is different from
       # expected.

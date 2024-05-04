@@ -61,9 +61,7 @@ jobs:
         id: setup-pnpm
         uses: pnpm/action-setup@v3
       - name: Install dependencies and build
-        run: |
-          pnpm install
-          pnpm run all
+        run: pnpm run preflight
       - name: Hello world action step
         uses: ./ # Uses an action in the root directory
         id: hello
