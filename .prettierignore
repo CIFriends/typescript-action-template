@@ -9,4 +9,4 @@ badges/
 script/
 pnpm-lock.yaml
 .eslintrc.js
-README.md
+*.md
