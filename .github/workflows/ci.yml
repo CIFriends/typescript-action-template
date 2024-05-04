@@ -56,6 +56,9 @@ jobs:
       # you must check out the repository
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Install pnpm
+        id: setup-pnpm
+        uses: pnpm/action-setup@v3
       - name: Install dependencies and build
         run: |
           pnpm install
