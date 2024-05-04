@@ -21,28 +21,32 @@ jobs:
         id: checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Install pnpm
+        id: setup-pnpm
+        uses: pnpm/action-setup@v3
+
+      - name: Set node version
         id: setup-node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@4.0.2
         with:
           node-version-file: .node-version
-          cache: npm
+          cache: 'pnpm'
 
       - name: Install Dependencies
-        id: npm-ci
-        run: npm ci
+        id: install
+        run: pnpm install
 
       - name: Check Format
-        id: npm-format-check
-        run: npm run format:check
+        id: pnpm-format-check
+        run: pnpm run format:check
 
       - name: Lint
-        id: npm-lint
-        run: npm run lint
+        id: pnpm-lint
+        run: pnpm run lint
 
       - name: Test
-        id: npm-ci-test
-        run: npm run ci-test
+        id: pnpm-ci-test
+        run: pnpm run ci-test
 
   test-action:
     runs-on: ubuntu-latest
@@ -52,10 +56,10 @@ jobs:
       # you must check out the repository
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Install dependencies
+      - name: Install dependencies and build
         run: |
-          npm ci
-          npm run all
+          pnpm install
+          pnpm run all
       - name: Hello world action step
         uses: ./ # Uses an action in the root directory
         id: hello
