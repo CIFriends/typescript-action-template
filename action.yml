@@ -1,4 +1,4 @@
-name: "Hello World"
+name: "typescript action template"
 description: "Example GitHub Action written in TypeScript"
 branding:
   icon: "book-open"
