@@ -1,9 +1,10 @@
 {
-  "name": "gh-action-test",
+  "name": "gh-action-example",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "preinstall": "npx only-allow pnpm",
     "bundle": "npm run format:write && npm run package",
     "ci-test": "npx jest",
     "format:write": "npx prettier --write .",
