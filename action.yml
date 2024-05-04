@@ -1,13 +1,16 @@
 name: "Hello World"
-description: "Greet someone and record the time"
+description: "Example GitHub Action written in TypeScript"
+branding:
+  icon: "book-open"
+  color: "white"
 inputs:
   who-to-greet: # id of input
     description: "Who to greet"
     required: true
     default: "World"
 outputs:
-  time: # id of output
-    description: "The time we greeted you"
+  message: # id of output
+    description: "The greeting"
 runs:
   using: "node20"
   main: "dist/index.js"
