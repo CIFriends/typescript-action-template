@@ -4,16 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "clean": "rimraf dist pnpm-lock.yaml node_modules",
     "preinstall": "npx only-allow pnpm",
     "bundle": "pnpm run format:write && pnpm run package",
-    "ci-test": "npx jest",
-    "format:write": "npx prettier --write .",
-    "format:check": "npx prettier --check .",
-    "lint": "npx eslint .",
-    "package": "npx ncc build src/index.ts -o dist --source-map --license licenses.txt",
+    "ci-test": "pnpm jest",
+    "format:write": "prettier --cache --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint --cache --cache-strategy content --report-unused-disable-directives .",
+    "package": "pnpm ncc build src/index.ts -o dist --source-map --license licenses.txt",
     "package:watch": "pnpm run package --watch",
-    "test": "npx jest --coverage --verbose",
-    "all": "pnpm run format:write && pnpm run lint && pnpm run test && pnpm run package"
+    "test": "pnpm jest --coverage --verbose",
+    "prepublishOnly": "pnpm run clean && pnpm install && pnpm run build",
+    "preflight": "pnpm install && pnpm run format:write && pnpm run lint && pnpm run test && pnpm run package"
   },
   "keywords": [],
   "author": "",
@@ -35,6 +37,7 @@
     "prettier": "^3.2.5",
     "ts-jest": "^29.1.2",
     "ts-node": "^10.9.2",
-    "typescript": "^5.4.5"
+    "typescript": "^5.4.5",
+    "rimraf": "5.0.5"
   }
 }
