@@ -1,7 +1,7 @@
 # GitHub Action Template
 
-> [!NOTE] Docs:
-> [docs.github.com](https://docs.github.com/en/actions/creating-actions/creating-a-javascript-action)
+> [!NOTE]
+> Docs: [docs.github.com](https://docs.github.com/en/actions/creating-actions/creating-a-javascript-action)
 
 This repository contains a template for creating a GitHub Action using
 TypeScript. It includes a set of workflows that automate the process of testing,
@@ -40,8 +40,8 @@ This will run the action with the input `who-to-greet` set to "Mona the Octocat"
 
 ## Adding Inputs and Outputs
 
-> [!NOTE] Docs:
-> [docs.github.com](https://docs.github.com/en/actions/creating-actions/metadata-syntax-for-github-actions)
+> [!NOTE]
+> Docs: [docs.github.com](https://docs.github.com/en/actions/creating-actions/metadata-syntax-for-github-actions)
 
 To add inputs and outputs to your GitHub Action, you need to define them in the
 `action.yml` file. Inputs are defined under the `inputs` field and outputs under
@@ -70,12 +70,13 @@ In your TypeScript code, you can use the `core.getInput` function from the
 
 ## Running the Action Locally
 
-> [!TIP] If you don't want to install `act` on your environment, you can use
-> GitHub Codespaces to run the action.
+> [!TIP] 
+> If you don't want to install `act` on your environment, you can use GitHub Codespaces to run the action.
 
 ### Nektos/act
 
-> [!NOTE] Docs: [nektos](https://nektosact.com/introduction.html);
+> [!NOTE]
+> Docs: [nektos](https://nektosact.com/introduction.html);
 
 Install [nektos/act](https://github.com/nektos/act) and run the following
 command:
