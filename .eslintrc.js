@@ -37,6 +37,12 @@ module.exports = {
     "no-else-return": ["error", { allowElseIf: false }],
     "consistent-return": "error",
     "no-console": "warn",
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      },
+    ],
     "@typescript-eslint/typedef": [
       "error",
       {
