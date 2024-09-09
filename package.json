@@ -68,6 +68,6 @@
     "ts-jest": "^29.2.5",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.5",
-    "rimraf": "5.0.7"
+    "rimraf": "6.0.1"
   }
 }
