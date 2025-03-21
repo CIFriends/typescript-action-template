@@ -20,7 +20,7 @@
   "keywords": [],
   "author": "",
   "license": "Apache-2.0",
-  "packageManager": "pnpm@9.0.6",
+  "packageManager": "pnpm@9.15.9",
   "jest": {
     "preset": "ts-jest",
     "verbose": true,
