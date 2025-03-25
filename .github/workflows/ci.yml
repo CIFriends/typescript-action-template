@@ -24,7 +24,7 @@ jobs:
 
       - name: Install pnpm
         id: setup-pnpm
-        uses: pnpm/action-setup@v3
+        uses: pnpm/action-setup@v4
 
       - name: Set node version
         id: setup-node
@@ -59,7 +59,7 @@ jobs:
         uses: actions/checkout@v4
       - name: Install pnpm
         id: setup-pnpm
-        uses: pnpm/action-setup@v3
+        uses: pnpm/action-setup@v4
       - name: Install dependencies and build
         run: pnpm run preflight
       - name: Hello world action step
